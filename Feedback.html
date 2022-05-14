@@ -1,0 +1,367 @@
+<!Doctype html>
+<html>
+<head>
+
+<title>Sreens Massive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style3.css">
+
+</head>
+<style>
+form {
+	border: 0.5px solid #1a1a1a;
+	width: 800px;
+	height: 700px;
+	margin: auto;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	}
+
+@media screen and (max-width: 800px) {
+form {
+	border: 0.5px solid #1a1a1a;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	}
+
+}
+
+.forms {
+	margin: auto;
+	width: 950px;
+	height: 830px;  
+	padding: 20px;
+	border: transparent;
+	overflow: hidden;
+	dislpay: block;
+  }
+
+@media screen and (max-width: 800px) {
+.forms {
+	margin: 0;
+	width: 100%;
+	height: auto;  
+	padding: 20px;
+	border: transparent;
+	overflow: hidden;
+	dislpay: block;
+  }
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 16px;
+	resize: vertical;
+	color: white;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+
+input[type=email], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 16px;
+	resize: vertical;
+	color: white;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+
+input[type=tel], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 16px;
+	resize: vertical;
+	color: white;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+
+input[type=submit] {
+	background-color: #1a1a1a;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #555;
+}
+
+.contn {
+	border-radius: 5px;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	padding: 20px;
+	height: 100%;
+ 
+}
+
+label {
+	color: white;
+	}
+
+select {
+	color: white;
+	}
+
+.error {
+	color: #FF0000;	
+}
+	
+</style>
+<body>
+
+<div class="bckgrnd">
+<img src="29.png" alt="Picture" width="100%" height="100%">
+<ul>
+ <div class="container">
+	<div class="pic1">
+	<h1 style="font-family: helvetica; color: 131e3a;">
+	
+ </ul>
+</div>
+
+
+
+<div class="topnav">
+
+<a href="Home.html">
+		
+      <img src="logo1.png" alt="Client" width="60" height="50"> 
+
+    </a>
+
+<a href="Movies.html">Movies</a>
+<a href="Competitions.html">Competitions</a> 
+<a href="Contact.html">Contact</a>
+<a href="Feedback.html">Feedback</a>
+
+<button onclick="document.getElementById('id01').style.display='block'" class="btn sign-in">Sign-Up /LogIn</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button class="sub">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#777">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a><br>
+	  </span>
+	  
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+  
+<br>
+<br> 
+</div>
+<br>
+<br>
+</div>
+</div> 
+
+
+ <div class="forms">
+ 
+<div class="contn">
+
+<!--?php
+// define variables and set to empty values
+$firstnameErr = $lastnameErr = $emailErr = $countryErr = "";
+$firstname = $lastname = $email = $country = $comment =  "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  if (empty($_POST["firstname"])) {
+    $firstnameErr = "Name is required";
+  }
+  else {
+    $firstname = test_input($_POST["firstname"]);
+    //to check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$firstname)) {
+      $firstnameErr = "Only letters and white space allowed";
+    }
+  }
+  
+   if (empty($_POST["lastname"])) {
+    $lastnameErr = "Last Name is required";
+  }
+  else {
+    $lastname = test_input($_POST["lastname"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$lastname)) {
+      $lastnameErr = "Only letters and white space allowed";
+    }
+  }
+  
+  if (empty($_POST["e-mail"])) {
+    $emailErr = "Email is required";
+  } 
+  else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+    
+
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } 
+  else {
+    $comment = test_input($_POST["comment"]);
+  }
+
+  if (empty($_POST["country"])) {
+    $countryErr = "Country is required";
+  } 
+  else {
+    $country = test_input($_POST["country"]);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?-->
+ 
+
+  <form method="post" action="submit.html" target="_blank"> 
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+	<span class="error">* <!--?php echo $firstnameErr;?--></span>
+	
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+	<span class="error">* <!--?php echo $lastnameErr;?--></span>
+
+    <label for="lname">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="Email.." required>
+	<span class="error">* <!--?php echo $emailErr;?--></span>
+	
+	<label for="lname">Phone</label>
+    <input type="tel" id="tel" title="Phone number must be at-least 8 characters" pattern="[\+]\d{3}\d{2}\d{3}\d{3}" placeholder="+267 70 000 000" required>
+	<span class="error">* <!--?php echo $emailErr;?--></span>
+
+    <label for="country">Country</label>
+    <select id="country" name="country" value="<?php echo $country;?>">
+	<span class="error">* <!--?php echo $countryErr;?--></span>
+	  <option value="none">None</option>
+      <option value="botswana">Botswana</option>
+      <option value="south africa">South Africa</option>
+      <option value="namibia">Namibia</option>
+    </select>
+
+    <label for="comment">Comment</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" cols="40"></textarea>
+
+    <input type="submit" name="submit" value="Submit">
+  </form>
+  
+ 
+</div>
+</div>
+
+
+<div class="footer">
+
+<div class="fm">
+
+<div class="row">
+  <div class="column">
+    <h4 style="font-family: calibri"> Get in touch</h4>
+	<a href="Contact.html">Contact us</a>
+	<p>Find a cinema</p>
+	<p>FAQ</p>
+	
+	<h4 style="font-family: calibri">Sales at SM</h4>
+	<p>Advertising</p>
+	<p>Conferencing And Venue Hire</p>
+	<p>Private Screenings</p>
+	<p>Promotions And Incentives</p>
+	<p>Cannes Lions</p>
+  </div>
+  
+  <div class="column">
+    <h4 style="font-family: calibri">SM coporate</h2>
+    <a href="Contact.html">About</a>
+	<p>Careers</p>
+	<p>Procurement</p>
+	<p>Vision Mission</p>
+	<p>News</p>
+  </div>
+  
+  <div class="column">
+    <h2 style="font-family: calibri">SM clubs and movie cards</h2>
+    <p>SM Club</p>
+	<p>SM Subscription Club</p>
+	<p>Discovery Vitality</p>
+	<p>Edgars Club Movie Benefit</p>
+  </div>
+ 
+</div><br><br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+</div>
+
+</body>
+</html>

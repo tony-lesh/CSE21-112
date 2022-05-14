@@ -1,0 +1,421 @@
+<!Doctype html>
+<html>
+<Head>
+
+<title>Sreens Massive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style3.css">
+
+</head>
+<style>
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+	width: 100%;
+	color: white;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+
+/* Set a style for all buttons */
+ .sub {
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	position: right;
+}
+
+.sub:hover {
+	opacity: 0.5;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #1a1a1a;
+	color: white;
+  
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+.container {
+	padding: 16px;
+ 
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Half width */
+	height: 100%; /* Full height */
+	overflow: hidden; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-top: 60px;
+  
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+	height: 70%;
+}
+
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #444;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #ffe5b4;
+	cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)} 
+	to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+	from {transform: scale(0)} 
+	to {transform: scale(1)}
+}
+
+/* Changing styles for span and cancel button on extra small screens */
+@media screen and (max-width: 800px) {
+	span.psw {
+    display: block;
+    float: none;
+  }
+  
+  .cancelbtn {
+    width: 100%;
+	color: white;
+  }
+}
+
+label {
+	color: white;
+	}
+	
+.contact {
+	margin: auto;
+	width: 850px;
+	height: 750px;  
+	padding: 20px;
+	border: transparent;
+	overflow: hidden;
+	dislpay: block;
+	background-color: #222021;
+  }
+ 
+@media screen and (max-width: 800px) { 
+  .contact {
+	margin: 0;
+  width: 100%;
+  height: auto;  
+  padding: 20px;
+  border: transparent;
+  overflow: hidden;
+  dislpay: block;
+  }
+}
+  
+select [id=text], select, textarea {
+	width: 50%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 16px;
+	resize: vertical;
+	color: white;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+	
+	
+@media screen and (max-width: 800px) { 
+select [id=text], select, textarea {
+	width: 100%;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 16px;
+	resize: vertical;
+	color: white;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+}
+
+.contact .float_right {
+	margin: auto;
+	height: 700px;
+	width: 270px;
+	border: transparent;
+	overflow: hidden;
+	dislpay: block;
+	float: right;
+	text-align: left;
+	color: #828282;
+	}
+	
+@media screen and (max-width: 800px) { 
+  .contact .float_right {
+	margin: 0;
+  width: 100%;
+  height: auto;  
+  padding: 20px;
+  border: transparent;
+  overflow: hidden;
+  dislpay: block;
+  }
+}
+	
+.cntct {
+	margin: auto;
+	width: 850px;
+	height: 150px;  
+	padding: 20px;
+	border: transparent;
+	overflow: hidden;
+	dislpay: block;
+	background-color: transparent;
+	color: white;
+  }
+  
+ @media screen and (max-width: 800px) { 
+.cntct {
+	margin: auto;
+	width: 100%;
+	height: 150px;  
+	padding: 20px;
+	border: transparent;
+	overflow: hidden;
+	dislpay: block;
+	background-color: transparent;
+	color: white;
+  }
+ }
+</style>
+<body>
+
+<div class="bckgrnd">
+<img src="29.png" alt="Picture" width="100%" height="100%">
+<ul>
+ <div class="cntnr">
+	<div class="pic1">
+	<h1 style="font-family: helvetica; color: 131e3a;">
+	
+ </ul>
+</div>
+
+
+
+<div class="topnav">
+
+<a href="Home.html">
+		
+      <img src="logo1.png" alt="Client" width="60" height="50"> 
+
+    </a>
+
+<a href="Movies.html">Movies</a>
+<a href="Competitions.html">Competitions</a> 
+<a href="Contact.html">Contact</a>
+<a href="Feedback.html">Feedback</a>
+
+<button onclick="document.getElementById('id01').style.display='block'" class="btn sign-in">Sign-Up /LogIn</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required> 
+        
+      <button class="sub">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#777">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a><br>
+	  </span>
+	  
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+</div>
+</div>
+</div>
+
+<div class="cntct">
+<h1 style="font-size: 250%">CONTACT US</h1>
+<h1 style="font-size: 150%">WE'D LOVE TO HELP YOU.</h1>
+</div>
+<br>
+<br>
+
+<div class="contact">
+ <label for="text">What can we help you with?</label><br>
+    <select id="text" name="text" placeholder="Please choose an option">	
+	  <option value="#">None</option>
+	  <option value="#">I just want to send a message</option>
+      <option value="#">Browsing Movies</option>
+      <option value="#">Booking Tickets</option>
+      <option value="#">SM clubs and movie cards</option>
+    </select>
+
+	
+<div class="float_right">
+	<h1 > Customer Care</h1>
+	<p> 0861 MOVIES (336092)</p>
+	
+	<h1>EMAIL</h1>
+	<a>info@screens_massive.com</a>
+	<br>
+	<p>For corporate or block bokings please contact us on:</p>
+	<a>corporate@screens_massive.com</a>
+	
+	<h2>POSTAL  ADDRESS</h2>
+	<p>PO Box 76461</p>
+	<p>Gaborone</p>
+	<p>aad2477</p>
+	
+	<h2>PHYSICAL ADDRESS</h2>
+	<p>Screens Massive Office Park</p>
+	<p>Mowana Mews</p>
+	<p>CBD Gaborone</p>
+	</div>
+</div>	
+<br>
+<br>
+
+<div class="footer">
+
+<div class="fm">
+
+<div class="row">
+  <div class="column">
+    <h4 style="font-family: calibri"> Get in touch</h4>
+	<a href="Contact.html">Contact us</a>
+	<p>Find a cinema</p>
+	<p>FAQ</p>
+	
+	<h4 style="font-family: calibri">Sales at SM</h4>
+	<p>Advertising</p>
+	<p>Conferencing And Venue Hire</p>
+	<p>Private Screenings</p>
+	<p>Promotions And Incentives</p>
+	<p>Cannes Lions</p>
+  </div>
+  
+  <div class="column">
+    <h4 style="font-family: calibri">SM coporate</h2>
+    <a href="Contact.html">About</a>
+	<p>Careers</p>
+	<p>Procurement</p>
+	<p>Vision Mission</p>
+	<p>News</p>
+  </div>
+  
+  <div class="column">
+    <h2 style="font-family: calibri">SM clubs and movie cards</h2>
+    <p>SM Club</p>
+	<p>SM Subscription Club</p>
+	<p>Discovery Vitality</p>
+	<p>Edgars Club Movie Benefit</p>
+  </div>
+  
+</div><br><br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+</div>
+
+</body>
+</html>

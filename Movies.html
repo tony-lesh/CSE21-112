@@ -1,0 +1,847 @@
+<!Doctype html>
+<html>
+<Head>
+
+<title>Sreens Massive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style3.css">
+<link rel="stylesheet" href="Background Style.css">
+</head>
+<style>
+.search-container {
+  float: left;
+ 
+}
+
+ input[type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	margin-left: 270px;
+	width: 770px;
+	height: 60px;
+	font-size: 17px;
+	border: none;
+	background-color: #333;
+}
+
+ .search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #787276;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+	width:55px;
+	height: 60px;
+}
+
+.search-container button:hover {
+	background: #f1f1f1;
+}
+
+@media screen and (max-width: 800px) {
+  .search-container {
+    float: none;
+	margin: auto;
+	dislpay: flex;
+  }
+ input[type=text], .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+	heihgt: auto;
+  }
+ input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+</style>
+<body>
+
+<div class="bg">
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+   <img src="30.png" width="100%" height="75%"> 
+  </div>
+
+  <div class="mySlides fade">
+   <img src="38.png" width="100%" height="75%" >
+  </div>
+
+  <div class="mySlides fade">
+   <img src="39.png" width="100%" height="75%" >   
+  </div>
+
+ <!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+</div>
+<br>
+
+
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+
+<!--img src="30.png" alt="Picture" width="100%" height="75%" ------------------------------------>
+<ul>
+ <div class="container">
+	<div class="pic1">
+	<h1 style="font-family: helvetica; color: 131e3a;">
+	<div class="header">Screens Massive</h1></div>
+ </ul>
+</div>
+
+
+<div class="topnav">
+
+<a href="Home.html">
+		
+      <img src="logo1.png" alt="Client" width="60" height="50"> 
+
+    </a>
+
+<a href="Movies.html">Movies</a>
+<a href="Competitions.html">Competitions</a> 
+<a href="Contact.html">Contact</a>
+<a href="Feedback.html">Feedback</a>
+
+<button onclick="document.getElementById('id01').style.display='block'" class="btn sign-in">Sign-Up /LogIn</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button class="sub">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#777">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a><br>
+	  </span>
+	  
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+</div>
+</div>
+
+<div class="search-container">
+    <form action="/action_page.php">
+      <input action="default.html" type="text" placeholder="Search.." name="search">
+      <!--button type="submit"><i class="fa fa-search"></i></button-->
+    </form>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="ddiv">
+ <div class="dropdown">
+<h3 style="color: white; font-family: Times New Roman;"> Filter by: <h3>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Cinemas  
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+	<h4>Cinemas</h4>
+      <a href="#">New Capitol</a>
+      
+    </div>
+  </div> 
+
+	<div class="dropdown">
+    <button class="dropbtn">Genres 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+	<h4>Genres</h4>
+      <a href="Action.html" target="_blank">Action</a>
+      <a href="Adult.html" target="_blank">Adult</a>
+      <a href="Comedy.html" target="_blank">Comedy</a>
+	   <!--a href="#">Adventure</a>
+      <a href="#">Drama</a>
+      <a href="#">Fiction</a-->
+	   <a href="Children.html" target="_blank">Children/ Family</a>
+      <!--a href="#">Musical</a>
+      <a href="#">Romance</a-->
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Cinema Type 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+	<h4>Cinema Types</h4>
+      <a href="Cinema.html">2D</a>
+      <a href="Cinema.html">3D</a>
+      <a href="Cinema.html">KIDS</a>
+	   <a href="Cinema.html">Prestige</a>
+      <a href="Cinema.html">IMAX</a>
+      <a href="Cinema.html">DBOX</a>
+	   <a href="Cinema.html">Subs</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Show Time 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+	<h4>Show Times</h4>
+      <a href="#">Between 9:00 and 10:00</a>
+      <a href="#">Between 11:30 and 12:30</a>
+      <a href="#">Between 14:00 and 15:00</a>
+	  <a href="#">Between 16:45 and 17:45</a>
+      <a href="#">Between 18:00 and 20:00</a>
+      <a href="#">Between 20:00 and 22:00</a>
+    </div>
+  </div> 
+  
+</div>
+
+
+<div class="movies2">
+
+<h2 style="font-family: copperplate gothic; color: white;">Latest Movies</h2>
+<br>
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="3.jpg">
+		<div class="cont">
+      <img src="3.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="4.jpg">
+		<div class="cont">
+      <img src="4.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+	<div class="mv">
+    <a target="_blank" href="5.jpg">
+		<div class="cont">
+      <img src="5.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="6.jpg">
+		<div class="cont">
+      <img src="6.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="7.jpg">
+		<div class="cont">
+      <img src="7.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="8.jpg">
+		<div class="cont">
+      <img src="8.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="9.jpg">
+		<div class="cont">
+      <img src="9.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="10.jpg">
+		<div class="cont">
+      <img src="10.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+</div>
+
+<div class="movies3">
+
+<h2 style="font-family: copperplate gothic; color: white;">Top  Watched</h2>
+<br>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="11.jpg">
+		<div class="cont">
+      <img src="11.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Any Day Now</h4>
+		Note
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="12.jpg">
+		<div class="cont">
+      <img src="12.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Never heard</h4>
+			Musical
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="13.jpg">
+		<div class="cont">
+      <img src="13.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Lookout</h4>
+		
+		Action
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="14.jpg">
+		<div class="cont">
+      <img src="14.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Knight of Cups</h4>
+		
+		Romance
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="15.jpg">
+		<div class="cont">
+      <img src="16.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Untitled</h4>
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="17.jpg">
+		<div class="cont">
+      <img src="17.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Untitled</h4>
+
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="19.jpg">
+		<div class="cont">
+      <img src="19.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>I Can Only Imagine</h4>
+		
+		Note
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="20.jpg">
+		<div class="cont">
+      <img src="20.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Proximity</h4>
+		
+		Fiction
+	
+	</div>
+	 
+  </div>
+</div>
+</div>
+
+<div class="movies4">
+
+<h2 style="font-family: copperplate gothic; color: white;">On the Trend</h2>
+<br>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="21.jpg">
+		<div class="cont">
+      <img src="21.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+	<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		
+		<h4>Project Almanac</h4>
+		
+		Fiction
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="22.jpg">
+		<div class="cont">
+      <img src="22.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		
+		<h4>Untitled</h4>
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="23.jpg">
+		<div class="cont">
+      <img src="23.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		
+		<h4>Celeste</h4>
+		
+		Note
+	
+	</div>
+	 
+  </div>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</div>
+
+<div class="footer">
+
+	<div class="fm">
+
+<div class="row">
+  <div class="column">
+    <h4 style="font-family: calibri"> Get in touch</h4>
+	<a href="Contact.html">Contact us</a>
+	<p>Find a cinema</p>
+	<p>FAQ</p>
+	
+	<h4 style="font-family: calibri">Sales at SM</h4>
+	<p>Advertising</p>
+	<p>Conferencing And Venue Hire</p>
+	<p>Private Screenings</p>
+	<p>Promotions And Incentives</p>
+	<p>Cannes Lions</p>
+  </div>
+  
+  <div class="column">
+    <h4 style="font-family: calibri">SM coporate</h2>
+    <a href="Contact.html">About</a>
+	<p>Careers</p>
+	<p>Procurement</p>
+	<p>Vision Mission</p>
+	<p>News</p>
+  </div>
+  
+  <div class="column">
+    <h2 style="font-family: calibri">SM clubs and movie cards</h2>
+    <p>SM Club</p>
+	<p>SM Subscription Club</p>
+	<p>Discovery Vitality</p>
+	<p>Edgars Club Movie Benefit</p>
+  </div>
+  
+</div><br><br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+	
+</div>
+
+</body>
+</html>

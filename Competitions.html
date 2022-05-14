@@ -1,0 +1,210 @@
+<!Doctype html>
+<html>
+<Head>
+
+<title>Sreens Massive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style3.css">
+
+</head>
+<style>
+
+.bckgrnd {
+  position: relative; 
+  color: white;
+}
+
+.bx {
+	background: transparent;
+	margin-left: 300px;
+	margin-top: 0;
+	color: white;
+	width: 420px;
+    height: 50;
+	padding: 2px;
+	border: transparent;
+	dislpay: block;
+	}
+	
+@media only screen and (max-width: 800px) {
+.bx {
+	background: transparent;
+	margin-left: 5%;
+	margin-top: auto;
+	color: white;
+	width: 100%;
+	height: auto;  
+	padding: 20px;
+	border: transparent;
+	dislpay: block;
+	}
+}
+	
+.box {
+	margin-left: auto;
+	margin-top:0px;
+	width: 720px;
+	height: 150px;  
+	padding: 2px;
+	border: transparent;
+	dislpay: block;
+	color: white;
+	background-color: transparent; 
+}
+
+@media only screen and (max-width: 800px) {
+.box {
+	margin-left: auto;
+	margin-top: 50%;  
+	width: 100%;
+	height: auto;  
+	padding: 20px;
+	border: transparent;
+	dislpay: block;
+	color: white;
+	background-color: transparent;
+  }
+ }
+
+</style>
+<body>
+
+
+<div class="bckgrnd">
+<img src="29.png" alt="Picture" width="100%" height="100%"> 
+
+<div class="bx">
+<div class="box">
+
+	<h1>COMPETITIONS</h1> 
+
+	<p>
+	There are currently no competitions at Screens Massive.<br>
+	<br>
+	Please check back again soon or sign up our newsletter to keep up to date on what's on!
+	</p>
+	
+</div>
+</div>
+
+<ul>
+ <div class="cntnr">
+	<div class="pic1">
+	<h1 style="font-family: helvetica; color: 131e3a;">
+	
+ </ul>
+</div>
+
+
+<div class="topnav">
+
+<a href="Home.html">
+		
+      <img src="logo1.png" alt="Client" width="60" height="50"> 
+
+    </a>
+
+<a href="Movies.html">Movies</a>
+<a href="Competitions.html">Competitions</a> 
+<a href="Contact.html">Contact</a>
+<a href="Feedback.html">Feedback</a>
+
+<button onclick="document.getElementById('id01').style.display='block'" class="btn sign-in">Sign-Up /LogIn</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button class="sub">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#777">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a><br>
+	  </span>
+	  
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+</div>
+</div>
+
+
+<div class="footer">
+
+	<div class="fm">
+
+<div class="row">
+  <div class="column">
+    <h4 style="font-family: calibri"> Get in touch</h4>
+	<a href="Contact.html">Contact us</a>
+	<p>Find a cinema</p>
+	<p>FAQ</p>
+	
+	<h4 style="font-family: calibri">Sales at SM</h4>
+	<p>Advertising</p>
+	<p>Conferencing And Venue Hire</p>
+	<p>Private Screenings</p>
+	<p>Promotions And Incentives</p>
+	<p>Cannes Lions</p>
+  </div>
+  
+  <div class="column">
+    <h4 style="font-family: calibri">SM coporate</h2>
+    <a href="Contact.html">About</a>
+	<p>Careers</p>
+	<p>Procurement</p>
+	<p>Vision Mission</p>
+	<p>News</p>
+  </div>
+  
+  <div class="column">
+    <h2 style="font-family: calibri">SM clubs and movie cards</h2>
+    <p>SM Club</p>
+	<p>SM Subscription Club</p>
+	<p>Discovery Vitality</p>
+	<p>Edgars Club Movie Benefit</p>
+  </div>
+  
+</div><br><br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+	
+</div>
+
+</body>
+</html>
