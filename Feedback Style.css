@@ -1,0 +1,118 @@
+form {
+	border: 0.5px solid #1a1a1a;
+	width: 800px;
+	height: 700px;
+	margin: auto;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	}
+
+@media screen and (max-width: 800px) {
+form {
+	border: 0.5px solid #1a1a1a;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	}
+
+}
+
+.forms {
+	margin: auto;
+	width: 950px;
+	height: 830px;  
+	padding: 20px;
+	border: transparent;
+	overflow: hidden;
+	dislpay: block;
+  }
+
+@media screen and (max-width: 800px) {
+.forms {
+	margin: 0;
+	width: 100%;
+	height: auto;  
+	padding: 20px;
+	border: transparent;
+	overflow: hidden;
+	dislpay: block;
+  }
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 16px;
+	resize: vertical;
+	color: white;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+
+input[type=email], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 16px;
+	resize: vertical;
+	color: white;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+
+input[type=tel], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 16px;
+	resize: vertical;
+	color: white;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+
+input[type=submit] {
+	background-color: #1a1a1a;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #555;
+}
+
+.contn {
+	border-radius: 5px;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	padding: 20px;
+	height: 100%;
+ 
+}
+
+label {
+	color: white;
+	}
+
+select {
+	color: white;
+	}
+
+.error {
+	color: #FF0000;	
+}
