@@ -1,29 +1,101 @@
 <!Doctype html>
 <html>
-<head>
+<Head>
 
-<title>Screens Massive</title>
+<title>Sreens Massive</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style1.css">
 <link rel="stylesheet" href="style3.css">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="Background Style.css">
 </head>
-<style>
-.bg {
-
-  background-image: url("28.png");
-  height: 75%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.3%;
-  
+<!--style>
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
 }
+* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+@keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+.active {
+  background-color: #717171;
+}
+</style-->
 
-
-</style>
 <body>
 
 <div class="bg">
+
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+   <img src="30.png" width="100%" height="75%"> 
+  </div>
+
+  <div class="mySlides fade">
+   <img src="38.png" width="100%" height="75%" >
+  </div>
+
+  <div class="mySlides fade">
+   <img src="39.png" width="100%" height="75%" >   
+  </div>
+
+ <!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+</div>
+<br>
+
+
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+
+<!--img src="30.png" alt="Picture" width="100%" height="75%" --------------------------------------------------->
 <ul>
  <div class="container">
 	<div class="pic1">
@@ -32,8 +104,6 @@
  </ul>
 </div>
 
-
-
 <div class="topnav">
 
 <a href="Home.html">
@@ -41,25 +111,64 @@
       <img src="logo1.png" alt="Client" width="60" height="50"> 
 
     </a>
-<a href="Movies.html">Movies</a> 
+
+<a href="Movies.html">Movies</a>
 <a href="Competitions.html">Competitions</a> 
 <a href="Contact.html">Contact</a>
 <a href="Feedback.html">Feedback</a>
 
-<button class="btn sign-in">Sign-In</button>
-<button class="btn sign-in">Create Profile</button>
+<button onclick="document.getElementById('id01').style.display='block'" class="btn sign-in">Sign-Up /LogIn</button>
+
+<div id="id01" class="modal">
   
-<br>
-<br> 
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button class="sub">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#777">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a><br>
+	  </span>
+	  
+    </div>
+  </form>
 </div>
-<br>
-<br>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+</div>
 </div>
 
 <div class="search-container">
     <form action="/action_page.php">
       <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <!--button type="submit"><i class="fa fa-search"></i></button-->
     </form>
   </div>
 </div>
@@ -68,18 +177,19 @@
 <br>
 <br>
 <br>
-<br>
 
 <div class="ddiv">
-
+<div class="dropdown">
 <h3 style="color: white; font-family: Times New Roman;">Filter by: <h3>
+</div>
 
  <div class="dropdown">
+ 
     <button class="dropbtn">Cinemas  
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">River-Walk</a>
+      <a href="#">New Capitol</a>
       
     </div>
   </div> 
@@ -89,15 +199,15 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Action</a>
-      <a href="#">Adult</a>
-      <a href="#">Comedy</a>
-	   <a href="#">Adventure</a>
+      <a href="Action.html" target="_blank">Action</a>
+      <a href="Adult.html" target="_blank">Adult</a>
+      <a href="Comedy.html" target="_blank">Comedy</a>
+	   <!--a href="#">Adventure</a>
       <a href="#">Drama</a>
-      <a href="#">Fiction</a>
-	   <a href="#">Children/ Family</a>
-      <a href="#">Musical</a>
-      <a href="#">Romance</a>
+      <a href="#">Fiction</a-->
+	   <a href="Children.html" target="_blank">Children/ Family</a>
+      <!--a href="#">Musical</a>
+      <a href="#">Romance</a-->
     </div>
   </div> 
   
@@ -106,13 +216,13 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">2D</a>
-      <a href="#">3D</a>
-      <a href="#">KIDS</a>
-	   <a href="#">Prestige</a>
-      <a href="#">IMAX</a>
-      <a href="#">DBOX</a>
-	   <a href="#">Subs</a>
+       <a href="Cinema.html">2D</a>
+      <a href="Cinema.html">3D</a>
+      <a href="Cinema.html">KIDS</a>
+	   <a href="Cinema.html">Prestige</a>
+      <a href="Cinema.html">IMAX</a>
+      <a href="Cinema.html">DBOX</a>
+	   <a href="Cinema.html">Subs</a>
     </div>
   </div> 
   
@@ -132,38 +242,38 @@
   
 </div>
 
-<div class="div">
+
+<div class="movies">
+
 <h2 style="font-family: copperplate gothic; color: white;">COMING SOON</h2>
 <br>
-<div class="flex-container1">
-<div class="res">
+	<div class="res">
   <div class="mv">
     <a target="_blank" href="3.jpg">
-	<div class="cont">
+		<div class="cont">
       <img src="3.jpg" alt="Client" width="200" height="250">
-	  <div class="bottom-left">13PG</div>
-	  </div>
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
     </a>
 	<br> 
-	
     <div class="desc">
 	
-	<button class="buttonload">
-  <i class="fa fa-spinner fa-spin"></i>Watch Trailer
+		<button class="buttonload">
+  PRE-BOOK NOW
 </button>
 <br>
-
-		Releases 30 April
-		<h4>Human Experience</h4>
-		Thriller
+		Releases 28 May
+		<h4>The Human Experience</h4>
+		
+		Fiction
 	
 	</div>
 	 
   </div>
 </div>
-  
 
-<div class="res">
+	<div class="res">
   <div class="mv">
     <a target="_blank" href="4.jpg">
 		<div class="cont">
@@ -189,24 +299,24 @@
   </div>
 </div>
 
-
-<div class="res">
+	<div class="res">
   <div class="mv">
-    <a target="_blank" href="5.jpg">
+<a target="_blank" href="5.jpg">
 		<div class="cont">
       <img src="5.jpg" alt="Client" width="200" height="250">
-	   <div class="bottom-left">13PG</div>
+	   <div class="bottom-left">16PG</div>
 	   </div>
+
     </a>
 	<br> 
     <div class="desc">
 	
-<button class="buttonload">
+		<button class="buttonload">
   <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
 </button>
 <br>
-		Releases 28 April
-		<h4>Uncharted</h4>
+		Releases 28 May
+		<h4>Untitled</h4>
 		
 		Action
 	
@@ -215,50 +325,77 @@
   </div>
 </div>
 
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="6.jpg">
+		<div class="cont">
+      <img src="6.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
 
-<div class="res">
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Start Up</h4>
+		
+		Action
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
   <div class="mv">
     <a target="_blank" href="7.jpg">
 		<div class="cont">
       <img src="7.jpg" alt="Client" width="200" height="250">
-	   <div class="bottom-left">13PG</div>
+	   <div class="bottom-left">16PG</div>
 	   </div>
+
     </a>
 	<br> 
     <div class="desc">
 	
-<button class="buttonload">
+		<button class="buttonload">
   <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
 </button>
 <br>
-		Releases 15 April
+		Releases 28 May
 		<h4>Start Up</h4>
-		Action
+		
+		Fiction
 	
 	</div>
 	 
   </div>
 </div>
-<br>
-<br>
-</div>
-<br>
-<br>
 
-<div class="fex-container2">
-
-<div class="res">
+	<div class="res">
   <div class="mv">
     <a target="_blank" href="8.jpg">
 		<div class="cont">
       <img src="8.jpg" alt="Client" width="200" height="250">
 	   <div class="bottom-left">16PG</div>
 	   </div>
+
     </a>
 	<br> 
     <div class="desc">
-		
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
 		<h4>The Happening</h4>
+		
 		Horror
 	
 	</div>
@@ -266,23 +403,25 @@
   </div>
 </div>
 
-<div class="res">
+	<div class="res">
   <div class="mv">
     <a target="_blank" href="9.jpg">
 		<div class="cont">
       <img src="9.jpg" alt="Client" width="200" height="250">
-	   <div class="bottom-left">13PG</div>
+	   <div class="bottom-left">16PG</div>
 	   </div>
+
     </a>
 	<br> 
     <div class="desc">
 	
-<button class="buttonload">
+		<button class="buttonload">
   <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
 </button>
 <br>
-		Releases 5 May
+		Releases 28 May
 		<h4>Abstraction</h4>
+		
 		Action
 	
 	</div>
@@ -290,17 +429,25 @@
   </div>
 </div>
 
-<div class="res">
+	<div class="res">
   <div class="mv">
     <a target="_blank" href="10.jpg">
 		<div class="cont">
       <img src="10.jpg" alt="Client" width="200" height="250">
-	   <div class="bottom-left">18SVL</div>
+	   <div class="bottom-left">16PG</div>
 	   </div>
+
     </a>
 	<br> 
     <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
 		<h4>The Last Song</h4>
+		
 		Romance
 	
 	</div>
@@ -308,36 +455,299 @@
   </div>
 </div>
 
-<div class="res">
+	<div class="res">
   <div class="mv">
     <a target="_blank" href="11.jpg">
 		<div class="cont">
       <img src="11.jpg" alt="Client" width="200" height="250">
 	   <div class="bottom-left">16PG</div>
 	   </div>
+
     </a>
 	<br> 
     <div class="desc">
-		<h4>Any Day Now</h4>
-		Biography
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
 	
 	</div>
 	 
   </div>
 </div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="12.jpg">
+		<div class="cont">
+      <img src="12.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
 <br>
-</div>
-<br>
-<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
 </div>
 
-<div class="div1">
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="13.jpg">
+		<div class="cont">
+      <img src="13.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="14.jpg">
+		<div class="cont">
+      <img src="14.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="15.jpg">
+		<div class="cont">
+      <img src="16.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="17.jpg">
+		<div class="cont">
+      <img src="17.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="19.jpg">
+		<div class="cont">
+      <img src="19.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="20.jpg">
+		<div class="cont">
+      <img src="20.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="21.jpg">
+		<div class="cont">
+      <img src="21.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="22.jpg">
+		<div class="cont">
+      <img src="22.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+
+	<div class="res">
+  <div class="mv">
+    <a target="_blank" href="23.jpg">
+		<div class="cont">
+      <img src="23.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">16PG</div>
+	   </div>
+
+    </a>
+	<br> 
+    <div class="desc">
+	
+		<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>PRE-BOOK NOW
+</button>
+<br>
+		Releases 28 May
+		<h4>Expulsion</h4>
+		
+		Horror
+	
+	</div>
+	 
+  </div>
+</div>
+</div>
+
+<div class="movies1">
 <h2 style="font-family: copperplate gothic; color: white;">Must Watch</h2>
 <br>
-<div class="fex-container3">
 
 <div class="res">
-  <div class="mv">
+  <div class="mv" onclick="myFunction()">
     <a target="_blank" href="8.jpg">
 		<div class="cont">
       <img src="8.jpg" alt="Client" width="200" height="250">
@@ -347,8 +757,10 @@
 	<br> 
     <div class="desc">
 	
-<button class="btnld">
+<button onclick="myFunction()" class="btnld">
+
   <i class="fa fa-spinner fa-spin"></i>Watch Trailer
+
 </button>
 		<h4>The Happening</h4>
 		Horror
@@ -356,10 +768,17 @@
 	</div>
 	 
   </div>
+  
+  <script>
+function myFunction() {
+  location.replace("https://www.youtube.com/embed/xMl_wHoN5X0")
+}
+</script>
+
 </div>
 
 <div class="res">
-  <div class="mv">
+  <div class="mv" onclick="myFunction()">
     <a target="_blank" href="9.jpg">
 		<div class="cont">
       <img src="9.jpg" alt="Client" width="200" height="250">
@@ -368,16 +787,26 @@
     </a>
 	<br> 
     <div class="desc">
+	<button onclick="myFunction()" class="btnld">
+  <i class="fa fa-spinner fa-spin"></i>Watch Trailer
+</button>
 		<h4>Abstraction</h4>
-		Action
+		Crime
 	
 	</div>
 	 
   </div>
+  
+   <script>
+function myFunction() {
+  location.replace("https://www.youtube.com/embed/mx-0riIDXhk")
+}
+</script>
+
 </div>
 
 <div class="res">
-  <div class="mv">
+  <div class="mv" onclick="myFunction()">
     <a target="_blank" href="10.jpg">
 		<div class="cont">
       <img src="10.jpg" alt="Client" width="200" height="250">
@@ -386,105 +815,152 @@
     </a>
 	<br> 
     <div class="desc">
+	<button onclick="myFunction()" class="btnld">
+  <i class="fa fa-spinner fa-spin"></i>Watch Trailer
+</button>
 		<h4>The Last Song</h4>
 		Romance
 	
 	</div>
 	 
   </div>
+  
+<script>
+function myFunction() {
+  location.replace("https://www.youtube.com/embed/vZH0Nf4KLBo")
+}
+</script>
+
 </div>
 
 <div class="res">
-  <div class="mv">
-    <a target="_blank" href="11.jpg">
+  <div class="mv" onclick="myFunction()">
+    <a target="_blank" href="32.jpg">
 		<div class="cont">
-      <img src="11.jpg" alt="Client" width="200" height="250">
-	   <div class="bottom-left">16PG</div>
+      <img src="32.jpg" alt="Client" width="200" height="250">
+	   <div class="bottom-left">13PG</div>
 	  </div>
     </a>
 	<br> 
     <div class="desc">
-		<h4>Any Day Now</h4>
-		Biography
+	<button onclick="myFunction()" class="btnld">
+  <i class="fa fa-spinner fa-spin"></i>Watch Trailer
+</button>
+		<h4>Mr Bones Son of Bones</h4>
+		Comedy
 	
 	</div>
 	 
   </div>
-</div>
-<br>
-<br>
-<br>
+  
+ <script>
+function myFunction() {
+  location.replace("https://www.youtube.com/embed/1LEsILmgbLk")
+}
+</script>
 
-</div>
-<br>
-<br>
-
-<div class="fex-container4">
-
-<div class="res">
-  <div class="mv">
-    <a target="_blank" href="8.jpg">
-      <img src="8.jpg" alt="Client" width="200" height="250">
-    </a>
-	<br> 
-    <div class="desc">
-		<h4>The Happening</h4>
-		Horror
-	
-	</div>
-	 
-  </div>
 </div>
 
 <div class="res">
-  <div class="mv">
-    <a target="_blank" href="9.jpg">
-      <img src="9.jpg" alt="Client" width="200" height="250">
+  <div class="mv" onclick="myFunction()">
+    <a target="_blank" href="33.jpg">
+      <img src="33.jpg" alt="Client" width="200" height="250">
     </a>
 	<br> 
     <div class="desc">
-		<h4>Abstraction</h4>
+	<button onclick="myFunction()" class="btnld">
+  <i class="fa fa-spinner fa-spin"></i>Watch Trailer
+</button>
+		<h4>Ambulence</h4>
 		Action
 	
 	</div>
 	 
   </div>
+  
+   <script>
+function myFunction() {
+  location.replace("https://www.youtube.com/embed/7NU-STboFeI")
+}
+</script>
 </div>
 
 <div class="res">
-  <div class="mv">
-    <a target="_blank" href="10.jpg">
-      <img src="10.jpg" alt="Client" width="200" height="250">
+  <div class="mv" onclick="myFunction()">
+    <a target="_blank" href="34.jpg">
+      <img src="34.jpg" alt="Client" width="200" height="250">
     </a>
 	<br> 
     <div class="desc">
-		<h4>The Last Song</h4>
-		Romance
+	<button onclick="myFunction()" class="btnld">
+  <i class="fa fa-spinner fa-spin"></i>Watch Trailer
+</button>
+		<h4>The Last Bus</h4>
+		Horror
 	
 	</div>
 	 
   </div>
+  
+   <script>
+function myFunction() {
+  location.replace("https://www.youtube.com/embed/43037dKDMuQ")
+}
+</script>
 </div>
 
 <div class="res">
-  <div class="mv">
-    <a target="_blank" href="11.jpg">
-      <img src="11.jpg" alt="Client" width="200" height="250">
+  <div class="mv" onclick="myFunction()">
+    <a target="_blank" href="35.jpg">
+      <img src="35.jpg" alt="Client" width="200" height="250">
     </a>
 	<br> 
     <div class="desc">
-		<h4>Any Day Now</h4>
-		Biography
+	<button onclick="myFunction()" class="btnld">
+  <i class="fa fa-spinner fa-spin"></i>Watch Trailer
+</button>
+		<h4>The Secrets of 
+			Dumbledore</h4>
+		Action
 	
 	</div>
 	 
   </div>
-</div>
-<br>
-<br>
-<br>
+  
+   <script>
+function myFunction() {
+  location.replace("https://www.youtube.com/embed/DaM_wL1ZOM4")
+}
+</script>
 </div>
 
+
+
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 
 </div>
@@ -496,7 +972,7 @@
 <div class="row">
   <div class="column">
     <h4 style="font-family: calibri"> Get in touch</h4>
-	<p>Contact us</p>
+	<a href="Contact.html">Contact us</a>
 	<p>Find a cinema</p>
 	<p>FAQ</p>
 	
@@ -510,7 +986,7 @@
   
   <div class="column">
     <h4 style="font-family: calibri">SM coporate</h2>
-    <p>About</p>
+    <a href="Contact.html">About</a>
 	<p>Careers</p>
 	<p>Procurement</p>
 	<p>Vision Mission</p>
